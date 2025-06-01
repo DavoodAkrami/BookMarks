@@ -1,6 +1,6 @@
 import BookMarkCard from "../../Components/BookMarkCard/BookMarkCard";
 import styles from "./HomePage.module.css";
-import initialBookmarks from "../../Data/BookmarksData";
+import initialBookmarks from "../../Data/BookMarksData";
 import { useState, useEffect } from "react";
 import Modal from "../../Components/Modal/Modal"
 
