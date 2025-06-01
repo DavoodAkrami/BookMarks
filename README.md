@@ -88,10 +88,6 @@ This project uses Vite for fast development and building. Currently, two officia
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgments
 
 - Inspired by macOS design principles
