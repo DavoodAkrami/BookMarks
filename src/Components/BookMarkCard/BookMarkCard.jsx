@@ -1,5 +1,5 @@
 import styles from './BookMarkCard.module.css';
-import initialBookmarks from '../../Data/BookmarksData';
+import initialBookmarks from '../../Data/BookMarksData';
 import { useState, useEffect } from 'react';
 
 
