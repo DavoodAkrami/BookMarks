@@ -1,0 +1,158 @@
+.header {
+    background-color: var(--macos-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--macos-border);
+    border-radius: 16px;
+    color: var(--macos-text);
+    padding: 32px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 24px;
+    z-index: 100;
+    margin: 24px auto;
+    max-width: 80%;
+    width: 80%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 530;
+    letter-spacing: -0.01em;
+}
+
+.bookmarkGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    padding: 24px;
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+    .bookmarkGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .bookmarkGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .bookmarkGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.addBookMarkButton {
+    background-color: var(--macos-blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.addBookMarkButton:hover {
+    background-color: #0056b3;
+}
+
+.BookMarkForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.formInput {
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--macos-border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: var(--macos-text);
+    font-size: 15px;
+    outline: none;
+    transition: all 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.formInput:focus {
+    border-color: var(--macos-blue);
+    box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.3);
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.submitButton {
+    background-color: var(--macos-blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+}
+
+.submitButton:hover {
+    background-color: #0056b3;
+}
+
+.cancelButton {
+    background-color: transparent;
+    color: var(--macos-text);
+    border: 1px solid var(--macos-border);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+}
+
+.cancelButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.deleteConfirmation {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 8px;
+}
+
+.deleteConfirmation h3 {
+    margin: 0;
+    color: var(--macos-text);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.deleteConfirmation p {
+    margin: 0;
+    color: var(--macos-text);
+    font-size: 14px;
+    opacity: 0.8;
+    line-height: 1.4;
+}

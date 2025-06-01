@@ -1,0 +1,41 @@
+:root {
+    --macos-bg: rgba(28, 28, 30, 0.8);
+    --macos-border: rgba(255, 255, 255, 0.1);
+    --macos-text: #E5E5E7;
+    --macos-blue: #0A84FF;
+    --macos-red: #FF453A;
+    --macos-yellow: #FFD60A;
+    --macos-green: #32D74B;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    color: var(--macos-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    user-select: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}

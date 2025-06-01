@@ -1,0 +1,103 @@
+.root {
+    all: unset;
+    width: 100%;
+}
+
+.card {
+    background-color: var(--macos-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 16px;
+    border: 1px solid var(--macos-border);
+    color: var(--macos-text);
+    padding: 16px;
+    width: 100%;
+    min-height: 120px;
+    max-width: 320px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.red button {
+    background-color: var(--macos-red);
+    border: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.red button:hover {
+    background-color: #FF3B30;
+    transform: scale(1.05);
+}
+
+.yello button {
+    background-color: var(--macos-yellow);
+    border: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.yello button:hover {
+    background-color: #FFD60A;
+    transform: scale(1.05);
+}
+
+.green button {
+    background-color: var(--macos-green);
+    border: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.green button:hover {
+    background-color: #32D74B;
+    transform: scale(1.05);
+}
+
+.name {
+    margin-top: 8px;
+}
+
+.name h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 530;
+    color: var(--macos-text);
+    letter-spacing: -0.01em;
+    margin-top: 16px;
+}
+
