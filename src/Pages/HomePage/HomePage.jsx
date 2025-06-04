@@ -3,7 +3,8 @@ import styles from "./HomePage.module.css";
 import initialBookmarks from "../../Data/BookMarksData";
 import { useState, useEffect } from "react";
 import Modal from "../../Components/Modal/Modal"
-
+import SearchBar from "../../Components/SearchBar/SearchBar"
+import { TaskManagement } from "../../Components/ToDoList/ToDoList";
 
 const Homepage = () => {
     const [bookmarks, setBookmarks] = useState(initialBookmarks);
@@ -95,9 +96,30 @@ const Homepage = () => {
 
     return (
         <>
-            <div className={styles.header}>
-                <h1>BookMarks</h1>
-                <button className={styles.addBookMarkButton} onClick={() => setOpenCreateUserModal(true)}>Add Bookmark</button>
+            <div className={styles.SearchBar}>
+                <SearchBar />
+            </div>
+            <div className={styles.container}>
+                <div className={styles.bookMarks}>
+                    <div className={styles.addBookMark}>
+                        <h1>BookMarks</h1>
+                        <button className={styles.addBookMarkButton} onClick={() => setOpenCreateUserModal(true)}>Add Bookmark</button>
+                    </div>
+                    <div className={styles.bookmarkGrid}>
+                        {bookmarks.map((bookmark, index) => (
+                            <BookMarkCard
+                                key={index}
+                                name={bookmark.name}
+                                url={bookmark.url}
+                                handleDelete={() => setDeleteBookmark(bookmark)}
+                                handleEdit={() => handleEdit(bookmark)}
+                            />
+                        ))}
+                    </div>
+                </div>
+                <div className={styles.toDoList}>
+                    <TaskManagement />
+                </div>
             </div>
             {openCreateUserModal && 
                 <Modal 
@@ -148,17 +170,6 @@ const Homepage = () => {
                     }
                 />
             }
-            <div className={styles.bookmarkGrid}>
-                {bookmarks.map((bookmark, index) => (
-                    <BookMarkCard
-                        key={index}
-                        name={bookmark.name}
-                        url={bookmark.url}
-                        handleDelete={() => setDeleteBookmark(bookmark)}
-                        handleEdit={() => handleEdit(bookmark)}
-                    />
-                ))}
-            </div>
         </>
     )
 }

@@ -1,0 +1,97 @@
+.searchBar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--macos-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--macos-border);
+    border-radius: 16px;
+    color: var(--macos-text);
+    padding: 32px 32px;
+    align-items: center;
+    top: 24px;
+    z-index: 100;
+    margin: 24px auto;
+    max-width: 80%;
+    width: 80%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.searchBarForm {
+    display: flex;
+    gap: 5px;
+    width: 80%;
+}
+
+.searchBarInput {
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--macos-border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: var(--macos-text);
+    font-size: 15px;
+    outline: none;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.searchBarInput:focus {
+    border-color: var(--macos-blue);
+    box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.3);
+}
+
+.submitSearchBar {
+    width: 20%;
+    background-color: var(--macos-blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.submitSearchBar:hover {
+    background-color: #0056b3;
+}
+
+
+.suggestions {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background-color: var(--macos-bg);
+    border: 1px solid var(--macos-border);
+    border-radius: 8px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.suggestionItem {
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    color: var(--macos-text);
+}
+
+.suggestionItem:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.suggestionIcon {
+    font-size: 16px;
+    opacity: 0.7;
+}
