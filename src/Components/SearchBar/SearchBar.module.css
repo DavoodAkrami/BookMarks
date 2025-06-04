@@ -95,3 +95,66 @@
     font-size: 16px;
     opacity: 0.7;
 }
+
+
+@media (max-width: 1200px) {
+    .searchBar {
+        max-width: 90%;
+        width: 90%;
+    }
+
+    .suggestions {
+        width: 90%;
+    }
+}
+
+@media (max-width: 992px) {
+    .searchBar {
+        max-width: 95%;
+        width: 95%;
+        padding: 24px;
+    }
+
+    .searchBarForm {
+        width: 90%;
+    }
+
+    .suggestions {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .searchBar {
+        padding: 20px;
+    }
+
+    .searchBarForm {
+        width: 100%;
+    }
+
+    .searchBarInput {
+        width: 70%;
+    }
+
+    .submitSearchBar {
+        width: 30%;
+    }
+}
+
+@media (max-width: 480px) {
+    .searchBar {
+        padding: 16px;
+        margin: 16px auto;
+    }
+
+    .searchBarInput {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .submitSearchBar {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+}

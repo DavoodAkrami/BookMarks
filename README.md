@@ -1,84 +1,98 @@
-# BookMarks - React Bookmark Management Application
+# BookMarks - Modern Task & Bookmark Manager
 
-A modern, responsive web application for managing your bookmarks with a clean, macOS-inspired design. Built with React and Vite, this application allows users to create, edit, and delete bookmarks with a beautiful and intuitive user interface.
+A modern, macOS-inspired web application for managing bookmarks and tasks with AI assistance. Built with React and styled with CSS modules.
+
+## Live Demo
+
+Visit the live application at: [https://book-marks-nine.vercel.app/](https://book-marks-nine.vercel.app/)
 
 ## Features
 
-- 📝 Create new bookmarks with custom names and URLs
-- ✏️ Edit existing bookmarks
-- 🗑️ Delete bookmarks with confirmation
-- 🎨 Modern, responsive design
-- 🔍 Easy bookmark management
+### Bookmark Management
+- Add, edit, and delete bookmarks
+- Grid layout for easy organization
+- Smooth animations and transitions
+- Responsive design for all devices
+
+### Task Management
+- Create, edit, and delete tasks
+- Priority levels (Low, Medium, High)
+- Task completion tracking
+- Responsive task list interface
+
+### AI Assistant
+- Natural language task management
+- Smart task organization
+- Priority suggestions
+- Context-aware responses
+- Real-time chat interface
+
+### Search Functionality
+- Google search integration
+- Clean, modern search interface
+- Responsive search bar
+
+### Design
+- macOS-inspired UI
+- Glassmorphism effects
+- Smooth animations
+- Fully responsive design
+- Cross-browser compatibility
 
 ## Technologies Used
 
 - React.js
-- Vite
 - CSS Modules
-- React Portal for modals
-- Modern JavaScript (ES6+)
+- Google Search API
+- AI Integration
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js (v14.0.0 or higher)
-- npm (v6.0.0 or higher)
-
-### Installation
-
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/BookMarks.git
+git clone https://github.com/yourusername/bookmarks.git
 ```
 
-2. Navigate to the project directory:
+2. Install dependencies:
 ```bash
-cd BookMarks
-```
-
-3. Install dependencies:
-```bash
+cd bookmarks
 npm install
 ```
 
-4. Start the development server:
+3. Start the development server:
 ```bash
-npm run dev
+npm start
 ```
 
-The application will open in your default browser at `http://localhost:5173`.
-
-## Usage
-
-1. Click "Add Bookmark" to create a new bookmark
-2. Enter the bookmark name and URL
-3. Click "Create" to save the bookmark
-4. Use the edit and delete buttons to manage your bookmarks
-5. All changes are automatically saved to local storage
+4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Project Structure
 
 ```
-BookMarks/
-├── src/
-│   ├── Components/
-│   │   ├── BookMarkCard/
-│   │   └── Modal/
-│   ├── Pages/
-│   │   └── HomePage/
-│   ├── Data/
-│   └── App.jsx
-├── public/
-└── package.json
+src/
+├── Components/
+│   ├── SearchBar/
+│   │   ├── SearchBar.jsx
+│   │   └── SearchBar.module.css
+│   └── ToDoList/
+│       ├── ToDoList.jsx
+│       ├── ToDoList.module.css
+│       └── AITaskManager.jsx
+├── Pages/
+│   └── HomePage/
+│       ├── HomePage.jsx
+│       └── HomePage.module.css
+└── App.js
 ```
 
-## Vite + React
+## Responsive Design
 
-This project uses Vite for fast development and building. Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The application is fully responsive and optimized for:
+- Desktop (1200px and above)
+- Laptop (992px to 1199px)
+- Tablet (768px to 991px)
+- Mobile (480px to 767px)
+- Small Mobile (below 480px)
 
 ## Contributing
 
@@ -88,8 +102,10 @@ This project uses Vite for fast development and building. Currently, two officia
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+
 ## Acknowledgments
 
-- Inspired by macOS design principles
-- Built with React and Vite best practices
-- Uses modern web development techniques 
+- macOS design inspiration
+- Google Search API
+- React.js community
+- CSS Modules documentation 

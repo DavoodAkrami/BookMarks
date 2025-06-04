@@ -13,6 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .taskHeader h1 {
@@ -377,4 +378,90 @@
 .chatInput button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+}
+
+@media (max-width: 992px) {
+    .taskHeader h1 {
+        font-size: 22px;
+    }
+
+    .taskItem {
+        padding: 12px;
+    }
+
+    .taskContent {
+        font-size: 14px;
+    }
+
+    .taskActions {
+        gap: 8px;
+    }
+
+    .taskButton {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .taskHeader h1 {
+        font-size: 20px;
+    }
+
+    .taskItem {
+        padding: 10px;
+    }
+
+    .taskContent {
+        font-size: 13px;
+    }
+
+    .taskActions {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .taskButton {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .priorityButtons {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .priorityButton {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .taskHeader {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .taskHeader h1 {
+        font-size: 18px;
+    }
+
+    .taskItem {
+        padding: 8px;
+    }
+
+    .taskContent {
+        font-size: 12px;
+    }
+
+    .taskButton {
+        font-size: 12px;
+    }
+
+    .priorityButton {
+        padding: 4px 8px;
+        font-size: 11px;
+    }
 }
