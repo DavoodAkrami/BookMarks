@@ -57,11 +57,14 @@ const SearchBar = () => {
     return (
         <div className={styles.container} ref={searchRef}>
             <div className={styles.searchBar}>
+                <div className={styles.googleLogo}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1200px-Google_%22G%22_logo.svg.png" alt="Google-Logo" />
+                </div>
                 <form onSubmit={handleSubmit} className={styles.searchBarForm}>
                     <input
                         type="text"
                         className={styles.searchBarInput}
-                        placeholder="Search..."
+                        placeholder="Search on Google..."
                         value={query}
                         onChange={handleInputChange}
                         onFocus={() => setShowSuggestions(true)}

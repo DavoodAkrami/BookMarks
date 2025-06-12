@@ -11,6 +11,7 @@ const Homepage = () => {
     const [openCreateUserModal, setOpenCreateUserModal] = useState(false);
     const [editBookmark, setEditBookmark] = useState(null);
     const [deleteBookmark, setDeleteBookmark] = useState(null);
+    const [search, setSearch] = useState('');
 
     useEffect(() => {
         const storedBookmarks = JSON.parse(localStorage.getItem('bookmarks'));
@@ -18,6 +19,11 @@ const Homepage = () => {
             setBookmarks(storedBookmarks);
         }
     }, []);
+
+    const filteredBookmarks = bookmarks.filter(bookmark => 
+        bookmark.name.toLowerCase().includes(search.toLowerCase()) ||
+        bookmark.url.toLowerCase().includes(search.toLowerCase())
+    );
 
     const BookMarkManagementForm = ({data, onCancel, hideCloseButton = false, cancelButtonText = 'Cancel'}) => {
         const isCreateMode = !data;
@@ -103,10 +109,19 @@ const Homepage = () => {
                 <div className={styles.bookMarks}>
                     <div className={styles.addBookMark}>
                         <h1>BookMarks</h1>
-                        <button className={styles.addBookMarkButton} onClick={() => setOpenCreateUserModal(true)}>Add Bookmark</button>
+                        <div className={styles.searchContainer}>
+                            <input 
+                                type="text" 
+                                placeholder="Search bookmarks..."
+                                value={search}
+                                onChange={(e) => setSearch(e.target.value)}
+                                className={styles.searchInput}
+                            />
+                            <button className={styles.addBookMarkButton} onClick={() => setOpenCreateUserModal(true)}>Add Bookmark</button>
+                        </div>
                     </div>
                     <div className={styles.bookmarkGrid}>
-                        {bookmarks.map((bookmark, index) => (
+                        {filteredBookmarks.map((bookmark, index) => (
                             <BookMarkCard
                                 key={index}
                                 name={bookmark.name}

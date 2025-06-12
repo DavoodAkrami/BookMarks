@@ -209,6 +209,28 @@
     line-height: 1.4;
 }
 
+.searchContainer {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.searchInput {
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--macos-border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: var(--macos-text);
+    font-size: 15px;
+    outline: none;
+    transition: all 0.2s ease;
+    width: 300px;
+}
+
+.searchInput:focus {
+    border-color: var(--macos-blue);
+    box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.3);
+}
 
 @media (max-width: 1200px) {
     .container {
